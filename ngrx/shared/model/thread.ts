@@ -2,5 +2,5 @@ export interface Thread{
 
     id: number;
     messageIds: number[];
-    participants: {[key:number]: number}
+    participants: {[key:number]: number} //map
 }
