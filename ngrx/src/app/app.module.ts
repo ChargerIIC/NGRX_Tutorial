@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { UserSelectionComponent } from './user-selection/user-selection.component';
@@ -7,6 +8,7 @@ import { ThreadSectionComponent } from './thread-section/thread-section.componen
 import { MessageSectionComponent } from './message-section/message-section.component';
 import { MessageListComponent } from './message-list/message-list.component';
 import { ThreadListComponent } from './thread-list/thread-list.component';
+import { ThreadService } from './services/thread.service';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { ThreadListComponent } from './thread-list/thread-list.component';
     ThreadListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ThreadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
